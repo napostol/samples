@@ -1,0 +1,541 @@
+<template
+	data-controller-name="com.sap.kelley.tea.controllers.details.Travel"
+	data-resource-bundle-name="com.sap.kelley.tea.l10n.TravelExpenseApproval"
+	data-resource-bundle-alias="l10n">
+
+<div id="oTravelPage" data-sap-ui-type="sap.m.Page"
+<<<<<<< Upstream, based on origin/master
+	data-nav-button-tap="onNavButtonTap" data-nav-button-text="Back"
+	data-show-nav-button="true">
+=======
+	data-nav-button-tap="onNavButtonTap" data-nav-button-text="Travel"
+	data-show-nav-button="true"
+	data-title="{l10n>DETAIL_TITLE}">
+>>>>>>> 3aab78d Localization adjustments
+	<div data-sap-ui-aggregation="headerContent">
+		<div data-sap-ui-type="sap.m.Button" data-text="Up"
+			data-tap="onPageSwipeRight"></div>
+		<div data-sap-ui-type="sap.m.Button" data-text="Down"
+			data-tap="onPageSwipeLeft"></div>
+	</div>
+	<!-- Detail Box -->
+	<div data-sap-ui-type="sap.m.VBox" class="vbox">
+		<div data-sap-ui-type="sap.m.HBox">
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/employee_name}"
+				class="headerBlue">
+				<div data-sap-ui-aggregation="layoutData">
+					<div data-sap-ui-type="sap.m.FlexItemData" data-grow-factor="1"></div>
+				</div>
+			</div>
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/expensed_amount}"
+				class="headerGray"></div>
+
+		</div>
+		<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/reason}"></div>
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/expensed_currency}"></div>
+		</div>
+		<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+			<div data-sap-ui-type="sap.m.HBox">
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/destination}"></div>
+			</div>
+			<div data-sap-ui-type="sap.m.HBox">	
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/dep_date}"></div>
+			<div data-sap-ui-type="sap.m.Label" data-text=" - "></div>
+			<div data-sap-ui-type="sap.m.Label"
+				data-text="{TravelExpenseApproval_Worklist>/arr_date}"></div>
+			</div>	
+		</div>
+		
+	</div>		
+	 
+	 <!-- TabContainer -->
+	 
+	 <div data-sap-ui-type="com.sap.kelley.controls.TabContainer">
+				<div data-sap-ui-aggregation="buttons">
+                    <div data-sap-ui-type="sap.m.Button" data-type="Transparent" id="Info" class="badge_info"></div>
+                    <div data-sap-ui-type="sap.m.Button" data-type="Transparent" id="Notes" class="badge_clip"></div>
+				</div>
+				<div data-sap-ui-aggregation="content">
+					<div class="form" id="Info">
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Text" data-text="184.61 USD of 384.61 are allocated to"></div>
+						</div>
+						<div class="hbox">
+							<div data-sap-ui-type="sap.m.VBox">
+								<div data-sap-ui-type="sap.m.Label" data-text="{l10n>COMPANY_CODE}"></div>
+								<div data-sap-ui-type="sap.m.Label" data-text="{l10n>ORDER}"></div>
+							</div>
+							<div data-sap-ui-type="sap.m.VBox">
+								<div data-sap-ui-type="sap.m.Text" data-text="{TravelExpenseApproval_Worklist>/wf_task_type}"></div>
+								<div data-sap-ui-type="sap.m.Text" data-text="{TravelExpenseApproval_Worklist>/trip_number}"></div>
+							</div>	
+							<div data-sap-ui-type="sap.m.VBox">
+								<div data-sap-ui-type="sap.m.Text" data-text="SAP Labs LLC"></div>
+								<div data-sap-ui-type="sap.m.Text" data-text="Apphaus: Scouting"></div>
+							</div>
+						</div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Text" data-text="200.00 USD of 384.61 are allocated to"></div>
+						</div>
+						<div class="hbox">
+							<div data-sap-ui-type="sap.m.VBox">
+								<div data-sap-ui-type="sap.m.Label" data-text="{l10n>COMPANY_CODE}"></div>
+								<div data-sap-ui-type="sap.m.Label" data-text="{l10n>ORDER}"></div>
+							</div>
+							<div data-sap-ui-type="sap.m.VBox">
+								<div data-sap-ui-type="sap.m.Text" data-text="{TravelExpenseApproval_Worklist>/wf_task_type}"></div>
+								<div data-sap-ui-type="sap.m.Text" data-text="{TravelExpenseApproval_Worklist>/trip_number}"></div>
+							</div>	
+							<div data-sap-ui-type="sap.m.VBox">
+								<div data-sap-ui-type="sap.m.Text" data-text="SAP Labs LLC"></div>
+								<div data-sap-ui-type="sap.m.Text" data-text="Apphaus: Marketing"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form" id="Notes">
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Text" data-text="Please provide the cc statement in order to get reimbursed" data-design="Bold"></div>
+						</div>
+						<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+									<div data-sap-ui-type="sap.m.Text" data-text="{TravelExpenseApproval_Worklist>/request_datetime}"></div>
+									<div data-sap-ui-type="sap.m.Text" data-text="{l10n>FLIGHT_PAID}" data-design="Bold"></div>
+									<div data-sap-ui-type="sap.m.Text" data-text="{TravelExpenseApproval_Worklist>/estimated_amount}"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+	 
+	 <!-- TabContainer -->
+	 
+	 <!-- Total Costs List -->
+	 <div data-sap-ui-type="sap.m.HBox">
+	 	<div data-sap-ui-type="sap.m.Label" data-text="{l10n>SETTLE_RES}" data-design="Bold" class="teaTitle"></div>
+	 </div>
+	 
+	 <div id="oCostsList" data-sap-ui-type="sap.m.List" data-inset="true" class="form">
+	 	<div data-sap-ui-aggregation="items">
+	 		<div data-sap-ui-type="sap.m.CustomListItem">
+	 			<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+	 				<div data-sap-ui-type="sap.m.Label" data-text="{l10n>REIMB_RECEIPT}" data-design="Bold" data-width="100%"></div>
+	 				<div data-sap-ui-type="sap.m.Text" data-text="0.00"></div>
+	 			</div>
+	 		</div>
+	 		<div data-sap-ui-type="sap.m.CustomListItem">
+	 			<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+	 				<div data-sap-ui-type="sap.m.Label" data-text="{l10n>PAID_RECEIPT}" data-design="Bold" data-width="100%"></div>
+	 				<div data-sap-ui-type="sap.m.Text" data-text="0.00"></div>
+	 			</div>
+	 		</div>
+	 		<div data-sap-ui-type="sap.m.CustomListItem">
+	 			<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+	 				<div data-sap-ui-type="sap.m.Label" data-text="{l10n>TOTAL_COST}" data-design="Bold" data-width="100%"></div>
+	 				<div data-sap-ui-type="sap.m.Text" data-text="0.00"></div>
+	 			</div>
+	 		</div>
+	 		<div data-sap-ui-type="sap.m.CustomListItem">
+	 			<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+	 				<div data-sap-ui-type="sap.m.Label" data-text="{l10n>PAID_RECEIPT}" data-design="Bold" data-width="100%"></div>
+	 				<div data-sap-ui-type="sap.m.Text" data-text="0.00"></div>
+	 			</div>
+	 		</div>
+	 		<div data-sap-ui-type="sap.m.CustomListItem">
+	 			<div data-sap-ui-type="sap.m.HBox" data-justify-content="SpaceBetween">
+	 				<div data-sap-ui-type="sap.m.Label" data-text="{l10n>REIMB_AMOUNT}" data-design="Bold" data-width="100%"></div>
+	 				<div data-sap-ui-type="sap.m.Text" data-text="0.00"></div>
+	 			</div>
+	 		</div>
+	 	</div>
+	 
+	 </div>
+	 
+	 <!-- Total Costs List -->
+	 
+	 <!-- Expense List -->
+	 <div data-sap-ui-type="sap.m.HBox">
+	 	<div data-sap-ui-type="sap.m.Label" data-text="{l10n>REIMB_EXP}" data-design="Bold" class="teaTitle"></div>
+	 </div>
+	 
+	 <div id="oTravelExpList" data-sap-ui-type="sap.m.List"
+			data-inset="true"
+			data-select="onListSelect" data-mode="SingleSelectMaster" 
+			data-items="{TravelExpenseApproval_WorklistReceipt>/results}">
+			<div data-sap-ui-aggregation="items">
+				<div data-sap-ui-type="sap.m.CustomListItem">
+					<div data-sap-ui-aggregation="customData">
+          				<div data-sap-ui-type="sap.ui.core.CustomData" data-key="id" data-value="{TravelExpenseApproval_WorklistReceipt>receipt_number}"></div>
+          			</div>
+					<div data-sap-ui-type="sap.m.HBox">
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_WorklistReceipt>receipt_number}"
+							data-width="100px"></div>
+						<div data-sap-ui-type="sap.m.Label" data-text="" data-width="10px"></div>
+						<div data-sap-ui-type="sap.m.Label" data-text="" data-width="10px"></div>
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_WorklistReceipt>exp_type_text}"
+							data-design="Bold">
+						<div data-sap-ui-aggregation="layoutData">
+							<div data-sap-ui-type="sap.m.FlexItemData" data-grow-factor="1"></div>
+						</div>
+						</div>
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_WorklistReceipt>receipt_amount}"
+							data-design="Bold"></div>
+						<div data-sap-ui-type="sap.m.Label" data-text="" data-width="10px"
+							data-design="Bold"></div>
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_WorklistReceipt>receipt_currency}"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Expense List -->
+		 
+		<!-- Footer -->
+		<div data-sap-ui-aggregation="footer">
+			<div data-sap-ui-type="sap.m.Bar">
+				<div data-sap-ui-aggregation="contentMiddle">
+					<div id="acceptButton" data-sap-ui-type="sap.m.Button"
+						data-text="{l10n>APPROVE}" data-type="Accept" data-tap="showPopoverDialog">
+						<div data-sap-ui-aggregation="customData">
+							<div data-sap-ui-type="sap.ui.core.CustomData" data-key="popover"
+								data-value="oApprovePopover"></div>
+							<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+								data-value="oApproveDialog"></div>
+						</div>
+					</div>
+					<div data-sap-ui-type="sap.m.Button" data-text="{l10n>REJECT}"
+						data-tap="showPopoverDialog" data-type="Reject">
+						<div data-sap-ui-aggregation="customData">
+							<div data-sap-ui-type="sap.ui.core.CustomData" data-key="popover"
+								data-value="oDeclinePopover"></div>
+							<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+								data-value="oDeclineDialog"></div>
+						</div>
+					</div>
+				</div>
+				<div data-sap-ui-aggregation="contentRight">
+					<div data-sap-ui-type="sap.m.Button" data-text="{l10n>FORWARD}"
+						data-tap="showPopoverDialog">
+						<div data-sap-ui-aggregation="customData">
+							<div data-sap-ui-type="sap.ui.core.CustomData" data-key="popover"
+								data-value="oSharePopover"></div>
+							<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+								data-value="oShareDialog"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+
+		<!-- Popovers, Dialogs START -->
+		<div data-sap-ui-type="sap.m.FlexBox" data-visible="false">
+
+			<!-- Dialog Approve -->
+			<div id="oApproveDialog" data-sap-ui-type="sap.m.Dialog"
+				data-title="{l10n>APPROVE}" data-visible="false" data-type="Message">
+				<div data-sap-ui-aggregation="content">
+					<div data-sap-ui-type="sap.m.VBox">
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_Worklist>/employee_name}"></div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>EXPENSE}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_amount}"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_currency}"></div>
+						</div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>TRIP}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>reason}"></div>
+						</div>
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CONFIRM}"
+							data-type="Accept" data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="id" data-value="{TravelExpenseApproval_Worklist>/workitem_id}"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oApproveDialog"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData" data-key="popover"
+									data-value="oApprovePopover"></div>
+							</div>
+						</div>
+
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CANCEL}"
+							data-tap="hidePopoverDialog" data-type="Reject" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oApprovePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oApproveDialog"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<!-- Dialog Decline  -->
+
+			<div id="oDeclineDialog" data-sap-ui-type="sap.m.Dialog"
+				data-title="{l10n>REJECT}" data-type="Message">
+				<div data-sap-ui-aggregation="content">
+					<div data-sap-ui-type="sap.m.VBox">
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_Worklist>/employee_name}"></div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>EXPENSE}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_amount}"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_currency}"></div>
+						</div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>TRIP}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/reason}"></div>
+						</div>
+
+						<div data-sap-ui-type="sap.m.TextArea"
+							data-value="Enter Comment Here" data-rows="6"
+							data-maxLength="255" data-width="100%"></div>
+
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CONFRIM}"
+							data-type="Accept" data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+							<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="id" data-value="{TravelExpenseApproval_Worklist>/workitem_id}"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oDeclinePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oDeclineDialog"></div>
+							</div>
+						</div>
+
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CANCEL}"
+							data-tap="hidePopoverDialog" data-type="Reject" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oDeclinePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oDeclineDialog"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- Dialog Share -->
+			<div id="oShareDialog" data-sap-ui-type="sap.m.Dialog"
+				data-title="{l10n>FORWARD}" data-type="Message">
+				<div data-sap-ui-aggregation="content">
+					<div data-sap-ui-type="sap.m.VBox">
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>REVISION}"
+							data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oSharePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oShareDialog"></div>
+							</div>
+						</div>
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>FORWARD}"
+							data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oSharePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oShareDialog"></div>
+							</div>
+						</div>
+						<div data-sap-ui-type="sap.m.Button" data-type="Reject"
+							data-text="{l10n>CANCEL}" data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oSharePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oShareDialog"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Popover Approve -->
+
+			<div id="oApprovePopover" data-sap-ui-type="sap.m.Popover"
+				data-title="Approve" data-placement="Top" data-visible="false">
+				<div data-sap-ui-aggregation="content">
+					<div data-sap-ui-type="sap.m.VBox">
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_Worklist>/employee_name}"></div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>EXPENSE}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_amount}"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_currency}"></div>
+						</div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>TRIP}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/reason}"></div>
+						</div>
+					</div>
+				</div>
+				<div data-sap-ui-aggregation="footer">
+					<div data-sap-ui-type="sap.m.Bar">
+						<div data-sap-ui-aggregation="contentLeft">
+							<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CONFIRM}"
+								data-type="Accept" data-tap="hidePopoverDialog">
+								<div data-sap-ui-aggregation="customData">
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="id" data-value="{TravelExpenseApproval_Worklist>/workitem_id}"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="popover" data-value="oApprovePopover"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="dialog" data-value="oApproveDialog"></div>
+								</div>
+							</div>
+						</div>
+						<div data-sap-ui-aggregation="contentRight">
+							<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CANCEL}"
+								data-tap="hidePopoverDialog" data-type="Reject">
+								<div data-sap-ui-aggregation="customData">
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="popover" data-value="oApprovePopover"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="dialog" data-value="oApproveDialog"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Popover Decline  -->
+
+			<div id="oDeclinePopover" data-sap-ui-type="sap.m.Popover"
+				data-title="{l10n>REJECT}" data-placement="Top" data-visible="false">
+				<div data-sap-ui-aggregation="content">
+					<div data-sap-ui-type="sap.m.VBox">
+						<div data-sap-ui-type="sap.m.Label"
+							data-text="{TravelExpenseApproval_Worklist>/employee_name}"></div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>EXPENSE}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_amount}"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>/expensed_currency}"></div>
+						</div>
+						<div data-sap-ui-type="sap.m.HBox">
+							<div data-sap-ui-type="sap.m.Label" data-text="{l10n>TRIP}"
+								data-width="100px" data-design="Bold"></div>
+							<div data-sap-ui-type="sap.m.Label"
+								data-text="{TravelExpenseApproval_Worklist>reason}"></div>
+						</div>
+
+						<div data-sap-ui-type="sap.m.TextArea"
+							data-value="Enter Comment Here" data-rows="6"
+							data-maxLength="255" data-width="100%"></div>
+					</div>
+				</div>
+				<div data-sap-ui-aggregation="footer">
+					<div data-sap-ui-type="sap.m.Bar">
+						<div data-sap-ui-aggregation="contentLeft">
+							<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CONFIRM}"
+								data-type="Accept" data-tap="hidePopoverDialog">
+								<div data-sap-ui-aggregation="customData">
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="id" data-value="{TravelExpenseApproval_Worklist>/workitem_id}"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="popover" data-value="oDeclinePopover"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="dialog" data-value="oDeclineDialog"></div>
+								</div>
+							</div>
+
+						</div>
+						<div data-sap-ui-aggregation="contentRight">
+							<div data-sap-ui-type="sap.m.Button" data-text="{l10n>CANCEL}"
+								data-tap="hidePopoverDialog" data-type="Reject">
+								<div data-sap-ui-aggregation="customData">
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="popover" data-value="oDeclinePopover"></div>
+									<div data-sap-ui-type="sap.ui.core.CustomData"
+										data-key="dialog" data-value="oDeclineDialog"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Popover Limit  -->
+
+
+
+			<!-- Share Popover -->
+
+			<div id="oSharePopover" data-sap-ui-type="sap.m.Popover"
+				data-title="{l10n>FORWARD}" data-placement="Top" data-visible="false">
+				<div data-sap-ui-aggregation="content">
+					<div data-sap-ui-type="sap.m.VBox" data-width="100%">
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>REVISION}"
+							data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oSharePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oShareDialog"></div>
+							</div>
+						</div>
+						<div data-sap-ui-type="sap.m.Button" data-text="{l10n>FORWARD}"
+							data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oSharePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oShareDialog"></div>
+							</div>
+						</div>
+						<div data-sap-ui-type="sap.m.Button" data-type="Reject"
+							data-text="{l10n>CANCEL}" data-tap="hidePopoverDialog" data-width="94%">
+							<div data-sap-ui-aggregation="customData">
+								<div data-sap-ui-type="sap.ui.core.CustomData"
+									data-key="popover" data-value="oSharePopover"></div>
+								<div data-sap-ui-type="sap.ui.core.CustomData" data-key="dialog"
+									data-value="oShareDialog"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+	</div>
+		
+
+		<!-- Popovers, Dialogs START -->
+	</div>
+
+</template>
